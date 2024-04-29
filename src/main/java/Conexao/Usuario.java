@@ -9,6 +9,7 @@ package Conexao;
  * @author Junior
  */
 public class Usuario {
+<<<<<<< HEAD
     private String login;
     private String senha;
     
@@ -24,4 +25,8 @@ public class Usuario {
     public String getSenha() {
         return senha;
     }
+=======
+    String login;
+    String senha;
+>>>>>>> 6ad771f541690cb3b9787faf885ada4a7f4db788
 }

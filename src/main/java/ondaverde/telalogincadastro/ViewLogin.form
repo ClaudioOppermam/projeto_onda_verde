@@ -200,9 +200,12 @@
               <Color id="Hand Cursor"/>
             </Property>
           </Properties>
+<<<<<<< HEAD
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jbAvancarActionPerformed"/>
           </Events>
+=======
+>>>>>>> 6ad771f541690cb3b9787faf885ada4a7f4db788
         </Component>
         <Component class="javax.swing.JLabel" name="naotemumaconta">
           <Properties>
