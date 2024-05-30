@@ -7,24 +7,21 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 /**
  *
- * @author Junior
- */
+ 
+@author Junior*/
 public class ConnectionFactory {
-    String port = "23577";
-    String host = "mysql-ondaverde-loginpage-6f2a.h.aivencloud.com";
-    String password = "AVNS_qeyAl-SErExLAAt5FCH";
-    String database = "defaultdb";
+    String host = "pg-3d883949-pandabr4ndow.a.aivencloud.com";
+    String port = "27641";
     String user = "avnadmin";
-    
+    String password = "AVNS_wf_Mhhl4UkbKI3y0zO3";
+    String database = "defaultdb";
+
     Connection conectar() throws Exception{
-        
-       var stringConexao = String.format(
-            "jdbc:sql://%s:%s/%s",
-            host, port, database   
-       );
-    return DriverManager.getConnection(
-            stringConexao, user, password
-        );
-                    }
-    
+
+            var stringConexao = String.format("jdbc:postgresql://%s:%s/%s",host, port, database);
+
+            return DriverManager.getConnection(stringConexao, user, password);
+
+
+    }
 }
