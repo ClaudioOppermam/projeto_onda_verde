@@ -258,6 +258,12 @@ public class ViewLogin extends javax.swing.JFrame {
             var dao = new UsuarioDAO();
             if(dao.existe(usuario)){
                 JOptionPane.showMessageDialog(null, "Bem vindo " + login + "!");
+            ViewTelaComum vtl = new ViewTelaComum();
+            vtl.setVisible(true);
+            vtl.pack();
+            vtl.setLocationRelativeTo(null);
+            vtl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            this.dispose();
             }
             else{
                 JOptionPane.showMessageDialog(null, "Usuário ou senha inválido");
