@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package TelasLoginCadastro;
 
 import Conexao.Usuario;
@@ -257,16 +253,27 @@ public class ViewLogin extends javax.swing.JFrame {
             var usuario = new Usuario(login, senha);
             var dao = new UsuarioDAO();
             if(dao.existe(usuario)){
-                JOptionPane.showMessageDialog(null, "Bem vindo " + login + "!");
-            ViewTelaComum vtl = new ViewTelaComum();
-            vtl.setVisible(true);
-            vtl.pack();
-            vtl.setLocationRelativeTo(null);
-            vtl.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            this.dispose();
+                if(usuario.getTipo()== 1){
+                    JOptionPane.showMessageDialog(null, "Bem vindo " + login + "!");
+                    ViewTelaAdmin vta = new ViewTelaAdmin();
+                    vta.setVisible(true);
+                    vta.pack();
+                    vta.setLocationRelativeTo(null);
+                    vta.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    this.dispose();
+                }else{
+                    JOptionPane.showMessageDialog(null, "Bem vindo " + login + "!");
+                    ViewTelaComum vtc = new ViewTelaComum();
+                    vtc.setVisible(true);
+                    vtc.pack();
+                    vtc.setLocationRelativeTo(null);
+                    vtc.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                    this.dispose();
+                }
             }
             else{
                 JOptionPane.showMessageDialog(null, "Usuário ou senha inválido");
+                
             }
         }
         catch(Exception e){
