@@ -329,7 +329,31 @@ public class ViewCadastro extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        
+        var novoLogin = jUsuarioField2.getText();
+        var novaSenha = jSenhaField4.getText();
+        var novoNome = jNomeField1.getText();
+        var novoCPF = jCpfField5.getText();
+        var novoEmail = jEmailField3.getText();
+        var novaIdade = jIdadeField6.getText();
+        var novoSexo = jSexoBox1.getSelectedItem();
+        //string pool
+        if (!novaSenha.trim().isEmpty() && !novoLogin.trim().isEmpty() && !novoNome.trim().isEmpty() && !novoCPF.trim().isEmpty() && !novoEmail.trim().isEmpty() && !novaIdade.trim().isEmpty() && novoSexo != null){
+            var usuario = new Usuario(novoLogin, novaSenha, novoNome, novoCPF, novoEmail, novaIdade, novoSexo);
+            var dao = new UsuarioDAO();
+            try {
+                dao.cadastrar(usuario);
+                if(dao.existe(usuario)){
+                    JOptionPane.showMessageDialog(null, "Usuario Cadastrado");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Não foi possivel realizar o cadastro");
+                }
+                
+            } catch (Exception ex) {
+                Logger.getLogger(ViewCadastro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jUsuarioField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jUsuarioField2ActionPerformed
