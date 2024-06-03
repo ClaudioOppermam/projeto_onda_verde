@@ -1,4 +1,4 @@
-package TelasLoginCadastro;
+package Telas;
 
 import Conexao.Usuario;
 import Conexao.UsuarioDAO;

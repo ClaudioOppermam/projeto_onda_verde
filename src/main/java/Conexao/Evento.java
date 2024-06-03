@@ -1,15 +1,7 @@
 package Conexao;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 import java.text.SimpleDateFormat;
-    import java.util.Date;
-/**
- *
- * @author Alexandre
- */
+
 public class Evento {
     
     private int codigo;
@@ -23,6 +15,10 @@ public class Evento {
         this.descricao = descricao;
         this.dataInicio = dataInicio;
         this.dataFim = dataFim;
+    }
+
+    public Evento() {
+        
     }
     
     public int getCodigo() {

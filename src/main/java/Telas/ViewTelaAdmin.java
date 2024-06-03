@@ -1,4 +1,4 @@
-package TelasLoginCadastro;
+package Telas;
 
 import Conexao.Evento;
 import Conexao.EventoDAO;
@@ -44,7 +44,6 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastrar Eventos");
-        setPreferredSize(new java.awt.Dimension(747, 520));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jEventosTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -52,7 +51,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Nome", "Data_Inico", "Data_Fim", "Descrição"
+                "cod_evento", "Nome", "Data_Inico", "Data_Fim", "Descrição"
             }
         ));
         jScrollPane1.setViewportView(jEventosTable1);

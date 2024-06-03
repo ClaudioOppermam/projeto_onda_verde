@@ -1,9 +1,5 @@
 package Conexao;
 
-/**
- *
- 
-@author Junior*/
 public class UsuarioDAO {
 
     public boolean existe(Usuario u) throws Exception {
