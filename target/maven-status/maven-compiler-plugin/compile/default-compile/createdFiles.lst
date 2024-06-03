@@ -10,11 +10,11 @@ TelasLoginCadastro\ViewCadastro$10.class
 TelasLoginCadastro\ViewCadastro$6.class
 TelasLoginCadastro\ViewLogin$2.class
 TelasLoginCadastro\ViewTelaAdmin$1.class
+TelasLoginCadastro\ViewTelaAdmin$3.class
 Conexao\Evento.class
 TelasLoginCadastro\ViewCadastro.class
 TelasLoginCadastro\ViewCadastro$3.class
 TelasLoginCadastro\ViewLogin$5.class
-TelasEventos\EventoTabelaModelo.class
 TelasLoginCadastro\ViewCadastro$8.class
 Conexao\EventoDAO.class
 TelasLoginCadastro\ViewLogin.class
@@ -24,3 +24,4 @@ TelasLoginCadastro\ViewTelaComum.class
 TelasLoginCadastro\ViewCadastro$4.class
 TelasLoginCadastro\ViewLogin$3.class
 TelasLoginCadastro\ViewCadastro$7.class
+TelasLoginCadastro\ViewTelaAdmin$2.class

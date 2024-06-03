@@ -1,5 +1,12 @@
 package TelasLoginCadastro;
 
+import Conexao.Evento;
+import Conexao.EventoDAO;
+import java.util.logging.Logger;
+import java.util.logging.Level;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author Br4ndow
@@ -11,6 +18,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
      */
     public ViewTelaAdmin() {
         initComponents();
+        setLocationRelativeTo(null);
     }
 
     /**
@@ -23,44 +31,100 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        jEventosTable1 = new javax.swing.JTable();
+        jNomeLabel1 = new javax.swing.JLabel();
+        jDescricaoLabel1 = new javax.swing.JLabel();
+        jDataInicioLabel1 = new javax.swing.JLabel();
+        jDataFimLabel1 = new javax.swing.JLabel();
+        jNomeTextField1 = new javax.swing.JTextField();
+        jDataInicialTextField1 = new javax.swing.JTextField();
+        jDataFimTextField1 = new javax.swing.JTextField();
+        jDescricaoTextField1 = new javax.swing.JTextField();
+        jRegistrarEventoButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Cadastrar Eventos");
+        setPreferredSize(new java.awt.Dimension(747, 520));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        jEventosTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, "adminTela", null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+
             },
             new String [] {
-                "Title 1", "Title 2", "Title 3", "Title 4"
+                "Nome", "Data_Inico", "Data_Fim", "Descrição"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        jScrollPane1.setViewportView(jEventosTable1);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(19, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(19, Short.MAX_VALUE))
-        );
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 610, 180));
+
+        jNomeLabel1.setText("Nome");
+        getContentPane().add(jNomeLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, -1, -1));
+
+        jDescricaoLabel1.setText("Descrição");
+        getContentPane().add(jDescricaoLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 180, -1, -1));
+
+        jDataInicioLabel1.setText("Data Inicio");
+        getContentPane().add(jDataInicioLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 50, -1, -1));
+
+        jDataFimLabel1.setText("Data fim");
+        getContentPane().add(jDataFimLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 50, 50, 20));
+
+        jNomeTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jNomeTextField1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jNomeTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 150, 30));
+        getContentPane().add(jDataInicialTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 80, 120, 30));
+        getContentPane().add(jDataFimTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 80, 120, 30));
+        getContentPane().add(jDescricaoTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 190, 70));
+
+        jRegistrarEventoButton1.setText("Registrar Evento");
+        jRegistrarEventoButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRegistrarEventoButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jRegistrarEventoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jNomeTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jNomeTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jNomeTextField1ActionPerformed
+
+    private void jRegistrarEventoButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRegistrarEventoButton1ActionPerformed
+        // TODO add your handling code here:
+         var novoNome = jNomeTextField1.getText();
+        var novaDescricao = jDescricaoTextField1.getText();
+        var novoDataInicio = jDataInicialTextField1.getText();
+        var novoDataFim = jDataFimTextField1.getText();
+      
+        //string pool
+        if (!novaDescricao.trim().isEmpty() && !novoDataInicio.trim().isEmpty() && !novoDataFim.trim().isEmpty() && novoNome != null){
+            var evento = new Evento(novoNome, novaDescricao, novoDataInicio, novoDataFim);
+            var dao = new EventoDAO();
+            try {
+                dao.create(evento);
+                if(dao.existe(evento)){
+                    JOptionPane.showMessageDialog(null, "Evento Cadastrado");
+                }else{
+                    JOptionPane.showMessageDialog(null, "Não foi possivel realizar o cadastro");
+                }
+                
+            } catch (Exception ex) {
+                Logger.getLogger(ViewCadastro.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
+        }
+        DefaultTableModel tbEventos = (DefaultTableModel) jEventosTable1.getModel();
+        Object[] dados = {jNomeTextField1.getText(), jDataInicialTextField1.getText(), jDataFimTextField1.getText(), jDescricaoTextField1.getText()};
+        tbEventos.addRow(dados);
+    }//GEN-LAST:event_jRegistrarEventoButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -73,7 +137,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
+                if ("Windows".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -98,7 +162,16 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jDataFimLabel1;
+    private javax.swing.JTextField jDataFimTextField1;
+    private javax.swing.JTextField jDataInicialTextField1;
+    private javax.swing.JLabel jDataInicioLabel1;
+    private javax.swing.JLabel jDescricaoLabel1;
+    private javax.swing.JTextField jDescricaoTextField1;
+    private javax.swing.JTable jEventosTable1;
+    private javax.swing.JLabel jNomeLabel1;
+    private javax.swing.JTextField jNomeTextField1;
+    private javax.swing.JButton jRegistrarEventoButton1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
 }

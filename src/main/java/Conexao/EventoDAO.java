@@ -1,50 +1,44 @@
 package Conexao;
 
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-  
-    import java.util.ArrayList;
-    import java.util.List;
+import java.sql.Date;
+import java.sql.SQLException;
 /**
  *
  * @author Alexandre
  */
 public class EventoDAO {
-    List<Evento> listar() throws Exception {
+        public boolean existe(Evento e) throws Exception {
+        var sql = "SELECT * FROM tb_evento nome WHERE nome = ? AND  descricao = ?";
+        var conexao = new ConnectionFactory().conectar();
+        var ps = conexao.prepareStatement(sql);
+        ps.setString(1, e.getNome());
+        ps.setString(2, e.getDescricao());
+        var rs = ps.executeQuery();
+        var eventoExiste = rs.next();
         
-        var eventos = new ArrayList<Evento>();
-        var sql = "SELECT * FROM tb_evento";
-        try (
-                var conexao = new ConnectionFactory().conectar();
-                    var ps = conexao.prepareStatement(sql);
-                    
-                    var rs = ps.executeQuery();){
-                while (rs.next()){
-                    var codigo = rs.getInt("cod_evento");
-                    var nome = rs.getString("nome");
-                    var descricao =  rs.getString("descricao");
-                    java.util.Date dataInicio = rs.getDate("data_inicio");
-                    java.util.Date dataFim = rs.getDate("data_fim");
-                    var evento = new Evento();
-                    evento.setCodigo(codigo);
-                    evento.setNome(nome);
-                    evento.setDescricao(descricao);
-                    evento.setDataInicio(dataInicio);
-                    evento.setDataFim(dataFim);
-                    evento.add(evento);
-                }   
-                
-                return eventos;
-                    
-            }
-        }
-        public static void main(String[] args) throws Exception{
-            var eventoDAO = new EventoDAO();
-            var eventos = eventoDAO.listar();
-            for(Evento e : eventos){
-                System.out.println(e);
-            }
-        }
+
+        rs.close();
+        conexao.close();
+        ps.close();
+
+        return eventoExiste;
+    }
+    
+    public void create(Evento e) throws Exception{
+    
+        var sql = "INSERT INTO tb_evento (nome, descricao, data_inicio, data_fim) VALUES (?, ?, ?, ?)";
+        var conexao = new ConnectionFactory().conectar();
+        var ps = conexao.prepareStatement(sql);
+            
+            ps.setString(1, e.getNome());
+            ps.setString(2, e.getDescricao());    
+            ps.setString(3, e.getDataInicio());
+            ps.setString(4, e.getDataFim());
+            
+            ps.execute();
+        //6. Fechar a conexão
+            conexao.close();
+         
+               
+    }
 }

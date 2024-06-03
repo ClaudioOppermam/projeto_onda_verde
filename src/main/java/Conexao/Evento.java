@@ -15,10 +15,16 @@ public class Evento {
     private int codigo;
     private String nome;
     private String descricao;
-    private Date dataInicio;
-    private Date dataFim;
+    private String dataInicio;
+    private String dataFim;
 
-
+    public Evento(String nome, String descricao, String dataInicio, String dataFim) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.dataInicio = dataInicio;
+        this.dataFim = dataFim;
+    }
+    
     public int getCodigo() {
         return codigo;
     }
@@ -43,19 +49,19 @@ public class Evento {
         this.descricao = descricao;
     }
 
-    public Date getDataInicio() {
+    public String getDataInicio() {
         return dataInicio;
     }
 
-    public void setDataInicio(Date dataInicio) {
+    public void setDataInicio(String dataInicio) {
         this.dataInicio = dataInicio;
     }
 
-    public Date getDataFim() {
+    public String getDataFim() {
         return dataFim;
     }
 
-    public void setDataFim(Date dataFim) {
+    public void setDataFim(String dataFim) {
         this.dataFim = dataFim;
     }
     @Override
