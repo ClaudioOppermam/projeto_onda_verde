@@ -7,6 +7,7 @@ import java.util.logging.Logger;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 /**
  *
@@ -22,6 +23,8 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
         preencherTabela();
         setLocationRelativeTo(null);
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
+        DefaultTableModel modelo = (DefaultTableModel) jEventosTable1.getModel();
+        jEventosTable1.setRowSorter(new TableRowSorter(modelo));
     }
     
     private void preencherTabela() {

@@ -4,6 +4,7 @@ import Conexao.EventoDAO;
 import Conexao.Evento;
 import java.util.List;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableRowSorter;
 
 
 
@@ -21,6 +22,8 @@ public class ViewTelaComum extends javax.swing.JFrame {
         preencherTabela();
         setLocationRelativeTo(null);
         this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
+        DefaultTableModel modelo = (DefaultTableModel) jUserEventosTable1.getModel();
+        jUserEventosTable1.setRowSorter(new TableRowSorter(modelo));
     }
     
     private void preencherTabela() {
