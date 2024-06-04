@@ -18,13 +18,13 @@ public class EventoDAO {
                  var rs = ps.executeQuery();) {
             while (rs.next()) {
                 //6. Lidar com o resultado
-                var codigo = rs.getInt("cod_evento");
+                //var codigo = rs.getInt("cod_evento");
                 var nome = rs.getString("nome");
                 var descricao = rs.getString("descricao");
                 var dataInicio = rs.getString("data_inicio");
                 var dataFim = rs.getString("data_fim");
                 var evento = new Evento();
-                evento.setCodigo(codigo);
+                //evento.setCodigo(codigo);
                 evento.setNome(nome);
                 evento.setDescricao(descricao);
                 evento.setDataInicio(dataInicio);

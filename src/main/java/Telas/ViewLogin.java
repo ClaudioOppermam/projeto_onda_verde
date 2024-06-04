@@ -16,6 +16,7 @@ public class ViewLogin extends javax.swing.JFrame {
      */
     public ViewLogin() {
         initComponents();
+        this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
     }
 
  public static void main(String args[]) {

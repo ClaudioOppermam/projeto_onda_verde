@@ -6,6 +6,7 @@ import java.util.List;
 import javax.swing.table.DefaultTableModel;
 
 
+
 /**
  *
  * @author Br4ndow
@@ -19,16 +20,17 @@ public class ViewTelaComum extends javax.swing.JFrame {
         initComponents();
         preencherTabela();
         setLocationRelativeTo(null);
+        this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
     }
     
     private void preencherTabela() {
         try {
             EventoDAO eventoDAO = new EventoDAO();
             List<Evento> eventos = eventoDAO.listar();
-            DefaultTableModel model = new DefaultTableModel(new Object[]{"Código", "Nome", "Descrição", "Data Início", "Data Fim"}, 0);
+            DefaultTableModel model = new DefaultTableModel(new Object[]{"Nome", "Descrição", "Data Início", "Data Fim"}, 0);
 
             for (Evento evento : eventos) {
-                model.addRow(new Object[]{evento.getCodigo(), evento.getNome(), evento.getDescricao(), evento.getDataInicio(), evento.getDataFim()});
+                model.addRow(new Object[]{evento.getNome(), evento.getDescricao(), evento.getDataInicio(), evento.getDataFim()});
             }
 
             jUserEventosTable1.setModel(model);
@@ -56,7 +58,7 @@ public class ViewTelaComum extends javax.swing.JFrame {
 
             },
             new String [] {
-                "cod_evento", "nome", "descricao", "data_inicio", "data_fim"
+                "nome", "descricao", "data_inicio", "data_fim"
             }
         ));
         jScrollPane1.setViewportView(jUserEventosTable1);

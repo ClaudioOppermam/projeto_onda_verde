@@ -2,6 +2,7 @@ package Telas;
 
 import Conexao.Evento;
 import Conexao.EventoDAO;
+import java.util.List;
 import java.util.logging.Logger;
 import java.util.logging.Level;
 import javax.swing.JOptionPane;
@@ -18,7 +19,25 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
      */
     public ViewTelaAdmin() {
         initComponents();
+        preencherTabela();
         setLocationRelativeTo(null);
+        this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
+    }
+    
+    private void preencherTabela() {
+        try {
+            EventoDAO eventoDAO = new EventoDAO();
+            List<Evento> eventos = eventoDAO.listar();
+            DefaultTableModel model = new DefaultTableModel(new Object[]{"Nome", "Descrição", "Data Início", "Data Fim"}, 0);
+
+            for (Evento evento : eventos) {
+                model.addRow(new Object[]{evento.getNome(), evento.getDescricao(), evento.getDataInicio(), evento.getDataFim()});
+            }
+
+            jEventosTable1.setModel(model);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     /**
@@ -44,6 +63,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastrar Eventos");
+        setPreferredSize(new java.awt.Dimension(742, 570));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jEventosTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -51,7 +71,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
 
             },
             new String [] {
-                "cod_evento", "Nome", "Data_Inico", "Data_Fim", "Descrição"
+                "Nome", "Data_Inico", "Data_Fim", "Descrição"
             }
         ));
         jScrollPane1.setViewportView(jEventosTable1);
@@ -121,7 +141,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
         }
         DefaultTableModel tbEventos = (DefaultTableModel) jEventosTable1.getModel();
-        Object[] dados = {jNomeTextField1.getText(), jDataInicialTextField1.getText(), jDataFimTextField1.getText(), jDescricaoTextField1.getText()};
+        Object[] dados = {jNomeTextField1.getText(), jDataInicialTextField1.getText(), jDataFimTextField1.getText(), jDescricaoTextField1.getText(),};
         tbEventos.addRow(dados);
     }//GEN-LAST:event_jRegistrarEventoButton1ActionPerformed
 

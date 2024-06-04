@@ -18,6 +18,7 @@ public class ViewCadastro extends javax.swing.JFrame {
      */
     public ViewCadastro() {
         initComponents();
+        this.setIconImage(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga1.png")).getImage());
     }
 
     /**
@@ -284,9 +285,7 @@ public class ViewCadastro extends javax.swing.JFrame {
                     .addComponent(jLabel9)
                     .addComponent(jButton2))
                 .addGap(20, 20, 20))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
