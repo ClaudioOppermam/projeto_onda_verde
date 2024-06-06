@@ -52,6 +52,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jEventosTable1 = new javax.swing.JTable();
         jNomeLabel1 = new javax.swing.JLabel();
@@ -63,11 +64,15 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
         jDataFimTextField1 = new javax.swing.JTextField();
         jDescricaoTextField1 = new javax.swing.JTextField();
         jRegistrarEventoButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Cadastrar Eventos");
         setPreferredSize(new java.awt.Dimension(742, 570));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tartaruga2.png"))); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 150, 100, 160));
 
         jEventosTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -111,6 +116,10 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
         });
         getContentPane().add(jRegistrarEventoButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 250, -1, -1));
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/ViewAdmin.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 740, 570));
+
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
@@ -141,7 +150,7 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
                 Logger.getLogger(ViewCadastro.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
+            JOptionPane.showMessageDialog(null, "Por favor, prencha todos os campos");
         }
         DefaultTableModel tbEventos = (DefaultTableModel) jEventosTable1.getModel();
         Object[] dados = {jNomeTextField1.getText(), jDataInicialTextField1.getText(), jDataFimTextField1.getText(), jDescricaoTextField1.getText(),};
@@ -191,6 +200,8 @@ public class ViewTelaAdmin extends javax.swing.JFrame {
     private javax.swing.JLabel jDescricaoLabel1;
     private javax.swing.JTextField jDescricaoTextField1;
     private javax.swing.JTable jEventosTable1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jNomeLabel1;
     private javax.swing.JTextField jNomeTextField1;
     private javax.swing.JButton jRegistrarEventoButton1;

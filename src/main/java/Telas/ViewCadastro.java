@@ -59,21 +59,26 @@ public class ViewCadastro extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setName(""); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/Logo.png"))); // NOI18N
         jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 0, 490, 500));
 
         jLabel2.setFont(new java.awt.Font("Calisto MT", 0, 48)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(98, 163, 219));
         jLabel2.setText("Cadastro");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(67, 28, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Calisto MT", 2, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(98, 163, 219));
         jLabel3.setText("\"Uma Vida Sustentável\"");
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 96, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(98, 163, 219));
         jLabel4.setText("Nome:");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 132, -1, -1));
 
         jNomeField1.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jNomeField1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(98, 163, 219), 2, true));
@@ -82,11 +87,13 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jNomeField1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jNomeField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 164, 150, 40));
 
         jLabel5.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(98, 163, 219));
         jLabel5.setText("Login:");
         jLabel5.setToolTipText("");
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 216, -1, -1));
 
         jUsuarioField2.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jUsuarioField2.setToolTipText("Login com o que voce iniciara sessão");
@@ -96,10 +103,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jUsuarioField2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jUsuarioField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 248, 150, 40));
 
         jLabel6.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(98, 163, 219));
         jLabel6.setText("E-mail:");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 300, -1, -1));
 
         jEmailField3.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jEmailField3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(98, 163, 219), 2, true));
@@ -108,10 +117,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jEmailField3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jEmailField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 332, 150, 40));
 
         jLabel7.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(98, 163, 219));
         jLabel7.setText("Senha:");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 384, -1, -1));
 
         jSenhaField4.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jSenhaField4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(98, 163, 219), 2, true));
@@ -120,10 +131,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jSenhaField4ActionPerformed(evt);
             }
         });
+        jPanel1.add(jSenhaField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 418, 150, 40));
 
         jLabel8.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(98, 163, 219));
         jLabel8.setText("CPF:");
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 132, -1, -1));
 
         jCpfField5.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jCpfField5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(98, 163, 219), 2, true));
@@ -132,10 +145,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jCpfField5ActionPerformed(evt);
             }
         });
+        jPanel1.add(jCpfField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(168, 164, 150, 40));
 
         jLabel9.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(98, 163, 219));
         jLabel9.setText("Já é registrado?");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 464, -1, -1));
 
         jIdadeField6.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jIdadeField6.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(98, 163, 219), 2, true));
@@ -144,10 +159,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jIdadeField6ActionPerformed(evt);
             }
         });
+        jPanel1.add(jIdadeField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 248, 101, 40));
 
         jLabel11.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(98, 163, 219));
         jLabel11.setText("Idade:");
+        jPanel1.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 216, -1, -1));
 
         jSexoBox1.setFont(new java.awt.Font("Calisto MT", 0, 14)); // NOI18N
         jSexoBox1.setForeground(new java.awt.Color(98, 163, 219));
@@ -159,10 +176,12 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jSexoBox1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jSexoBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 332, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(98, 163, 219));
         jLabel10.setText("Sexo:");
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(192, 300, -1, -1));
 
         jButton1.setFont(new java.awt.Font("Calisto MT", 0, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(98, 163, 219));
@@ -174,6 +193,7 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(198, 384, 75, -1));
 
         jButton2.setFont(new java.awt.Font("Calisto MT", 0, 20)); // NOI18N
         jButton2.setForeground(new java.awt.Color(0, 38, 255));
@@ -191,102 +211,7 @@ public class ViewCadastro extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(6, 6, 6)
-                                .addComponent(jLabel3))))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jNomeField1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jUsuarioField2, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jEmailField3, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jCpfField5, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel8)))
-                                    .addGroup(jPanel1Layout.createSequentialGroup()
-                                        .addGap(36, 36, 36)
-                                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(jLabel11)
-                                            .addComponent(jIdadeField6, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jSexoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jLabel10)))))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jLabel7)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(45, 45, 45))
-                            .addComponent(jSenhaField4, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton2)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 500, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(28, 28, 28)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel8))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jNomeField1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jCpfField5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jLabel11))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jUsuarioField2, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jIdadeField6, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel10))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jEmailField3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jSexoBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jSenhaField4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel9)
-                    .addComponent(jButton2))
-                .addGap(20, 20, 20))
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(157, 464, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -353,7 +278,7 @@ public class ViewCadastro extends javax.swing.JFrame {
                 Logger.getLogger(ViewCadastro.class.getName()).log(Level.SEVERE, null, ex);
             }
         }else{
-            JOptionPane.showMessageDialog(null, "Por favor, preencha todos os campos");
+            JOptionPane.showMessageDialog(null, "Por favor, prencha todos os campos");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
